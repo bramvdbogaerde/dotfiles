@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/bram/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/bram/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/bram/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/bram/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/bram/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/bramvandenbogaerde/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/bramvandenbogaerde/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/bramvandenbogaerde/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/bramvandenbogaerde/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/bramvandenbogaerde/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,59 +71,59 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["ctrlp.vim"] = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/ctrlp.vim"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/ctrlp.vim"
   },
   gruvbox = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/gruvbox"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/gruvbox"
   },
   nerdtree = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/nerdtree"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/nerdtree"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-metals"] = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/nvim-metals"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/nvim-metals"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\n¢\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\nerror\nerror\16information\tinfo\thint\thint\fwarning\twarn\1\0\2\nicons\1\29use_lsp_diagnostic_signs\1\nsetup\ftrouble\frequire\0" },
+    config = { "\27LJ\2\n¢\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\thint\thint\fwarning\twarn\nerror\nerror\16information\tinfo\1\0\2\29use_lsp_diagnostic_signs\1\nicons\1\nsetup\ftrouble\frequire\0" },
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
   ["vim-airline"] = {
     loaded = true,
-    path = "/home/bram/.local/share/nvim/site/pack/packer/start/vim-airline"
+    path = "/Users/bramvandenbogaerde/.local/share/nvim/site/pack/packer/start/vim-airline"
   }
 }
 
 time([[Defining packer_plugins]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n¢\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\nerror\nerror\16information\tinfo\thint\thint\fwarning\twarn\1\0\2\nicons\1\29use_lsp_diagnostic_signs\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+try_loadstring("\27LJ\2\n¢\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\thint\thint\fwarning\twarn\nerror\nerror\16information\tinfo\1\0\2\29use_lsp_diagnostic_signs\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
 if should_profile then save_profiles() end
 

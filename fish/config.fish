@@ -15,9 +15,30 @@ set -p PATH $HOME/.npm/bin
 set -p PATH /usr/local/go/bin
 set -p PATH $HOME/.gem/ruby/2.7.0/bin
 set -p PATH /var/lib/snapd/snap/bin
+set -p PATH $HOME/.cargo/bin
+set -p PATH /Applications/sbt/bin
+set -p PATH "$HOME/Library/Application Support/Coursier/bin"
 
 # make it an environment variable
 set -x PATH $PATH
+
+###############################
+# Homebrew		      #
+###############################
+
+set -gx HOMEBREW_PREFIX "/usr/local";
+set -gx HOMEBREW_CELLAR "/usr/local/Cellar";
+set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew";
+
+set -p PATH /opt/homebrew/bin
+
+###############################
+# Nix
+###############################
+
+set -p PATH $HOME/.nix-profile/bin
+set -x NIX_PATH /Users/bramvandenbogaerde/.nix-defexpr/channels ;
+set -x NIX_SSL_CERT_FILE ~/.nix-profile/etc/ssl/certs/ca-bundle.crt
 
 ###############################
 # Other environment variables #

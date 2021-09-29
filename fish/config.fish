@@ -46,7 +46,7 @@ alias z3wasm="tmux source-file /home/bram/.tmux/z3wasm.sh"
 alias thesis="tmux source-file /home/bram/.tmux/thesis.sh"
 alias ip="ip -c"
 alias attach="tmux a -t"
-alias emsdk_setup ". /path/to/emsdk/emsdk_env.fish"
+alias emsdk_setup ". $HOME/data/sources/emsdk/emsdk_env.fish"
 
 ########################
 # Global Abbreviations #

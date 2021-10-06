@@ -18,6 +18,7 @@ set -p PATH /var/lib/snapd/snap/bin
 set -p PATH $HOME/.cargo/bin
 set -p PATH /Applications/sbt/bin
 set -p PATH "$HOME/Library/Application Support/Coursier/bin"
+set -p PATH "$HOME/.local/share/coursier/bin"
 
 # make it an environment variable
 set -x PATH $PATH

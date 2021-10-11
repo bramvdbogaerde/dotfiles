@@ -18,6 +18,7 @@ set -p PATH /var/lib/snapd/snap/bin
 set -p PATH $HOME/.cargo/bin
 set -p PATH /Applications/sbt/bin
 set -p PATH "$HOME/Library/Application Support/Coursier/bin"
+set -p PATH "$HOME/.local/share/coursier/bin"
 
 # make it an environment variable
 set -x PATH $PATH
@@ -68,6 +69,7 @@ alias thesis="tmux source-file /home/bram/.tmux/thesis.sh"
 alias ip="ip -c"
 alias attach="tmux a -t"
 alias scheme="/Applications/Racket\ v8.2/bin/plt-r5rs"
+alias emsdk_setup ". $HOME/data/sources/emsdk/emsdk_env.fish"
 
 ########################
 # Global Abbreviations #

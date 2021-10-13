@@ -11,7 +11,11 @@ return require('packer').startup(function()
    -- Editor support
    use({'preservim/nerdtree'})
    use({'morhetz/gruvbox'})
-   use({'vim-airline/vim-airline'})
+   -- use({'vim-airline/vim-airline'})
+   use {
+     'hoob3rt/lualine.nvim',
+     requires = {'kyazdani42/nvim-web-devicons', opt = true}
+   }
    use('ctrlpvim/ctrlp.vim')
 
    -- LSP
@@ -35,6 +39,7 @@ return require('packer').startup(function()
    }
 
    use('neovim/nvim-lspconfig')
+   use('nvim-lua/lsp-status.nvim')
 
    use {
      'nvim-telescope/telescope.nvim',

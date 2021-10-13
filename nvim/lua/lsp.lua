@@ -17,10 +17,6 @@ vim.opt_global.shortmess:remove("F"):append("c")
 
 Utils.nremap_key("<space>a", ":TroubleToggle<CR>")
 
-vim.cmd [[
-   let g:airline_section_b = '%{metals#status()}'
-]]
-
 require'lspconfig'.rust_analyzer.setup{}
 
 Utils.map("n", "<space>o", "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>")

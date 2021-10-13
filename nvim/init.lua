@@ -19,4 +19,4 @@ require("plugins")
 require("editor")
 require("scala")
 require("lsp")
-
+require("statusline")

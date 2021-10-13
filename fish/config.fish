@@ -38,8 +38,9 @@ set -p PATH /opt/homebrew/bin
 ###############################
 
 set -p PATH $HOME/.nix-profile/bin
-set -x NIX_PATH /Users/bramvandenbogaerde/.nix-defexpr/channels ;
-set -x NIX_SSL_CERT_FILE ~/.nix-profile/etc/ssl/certs/ca-bundle.crt
+set -x NIX_PATH $HOME/.nix-defexpr/channels ;
+#set -x NIX_SSL_CERT_FILE $HOME/.nix-profile/etc/ssl/certs/ca-bundle.crt
+set -x NIX_SSL_CERT_FILE /etc/ssl/certs/ca-certificates.crt
 
 ###############################
 # Other environment variables #

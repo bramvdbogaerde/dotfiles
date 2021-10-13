@@ -53,7 +53,7 @@ set -x EDITOR    nvim
 # Global aliases #
 ##################
 
-alias pbcopy="xclip -selection clipboard"
+# alias pbcopy="xclip -selection clipboard"
 alias ssu="sudo"
 alias e="$EDITOR"
 alias d="firefox --new-window doc.rust-lang.org/std/"
@@ -69,6 +69,7 @@ alias z3wasm="tmux source-file /home/bram/.tmux/z3wasm.sh"
 alias thesis="tmux source-file /home/bram/.tmux/thesis.sh"
 alias ip="ip -c"
 alias attach="tmux a -t"
+alias scheme="/Applications/Racket\ v8.2/bin/plt-r5rs"
 alias emsdk_setup ". $HOME/data/sources/emsdk/emsdk_env.fish"
 
 ########################

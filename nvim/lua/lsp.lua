@@ -18,6 +18,8 @@ vim.opt_global.shortmess:remove("F"):append("c")
 Utils.nremap_key("<space>a", ":TroubleToggle<CR>")
 
 require'lspconfig'.rust_analyzer.setup{}
+require('lspconfig').ccls.setup{}
+
 
 Utils.map("n", "<space>o", "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>")
 Utils.map("n", "<space>s", "<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>")

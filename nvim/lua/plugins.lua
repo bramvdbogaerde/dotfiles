@@ -8,6 +8,9 @@ return require('packer').startup(function()
    -- Scala
    use({'scalameta/nvim-metals'})
 
+   -- Coq
+   use({"whonore/Coqtail"})
+
    -- Editor support
    use({'preservim/nerdtree'})
    use({'morhetz/gruvbox'})
@@ -20,6 +23,8 @@ return require('packer').startup(function()
 
    -- LSP
    use('hrsh7th/nvim-compe')
+   -- use { 'ms-jpq/coq_nvim', branch = "coq" }
+   -- use { 'ms-jpq/coq.artifacts', branch = "artifacts" }
 
    use {
       "folke/trouble.nvim",

@@ -28,3 +28,4 @@ Utils.map("n", "<leader>ef", "<cmd>lua require('telescope.builtin').lsp_code_act
 Utils.map("i", "<CR>", 'compe#confirm("\\<CR>")', { expr = true })
 Utils.map("n", "<leader>en", "<cmd>lua vim.lsp.diagnostic.goto_next { wrap = true }<CR>")
 Utils.map("n", "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>")
+Utils.map("n", "<leader>i", "<cmd>lua vim.lsp.buf.hover()<CR>")

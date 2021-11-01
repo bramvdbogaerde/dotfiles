@@ -1,17 +1,3 @@
--- require'compe'.setup({
---    enabled = true,
---    min_length = 1,
---    source = {
---       path = true,
---       buffer = true,
---       nvim_lsp = {
---          priority = 1000,
---          filetypes = { "scala", "sbt", "java" },
---       },
---    }
--- })
-
-
 vim.opt_global.completeopt = { "menu", "noinsert", "noselect" }
 vim.opt_global.shortmess:remove("F"):append("c")
 

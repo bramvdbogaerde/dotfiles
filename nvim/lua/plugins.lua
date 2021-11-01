@@ -22,7 +22,6 @@ return require('packer').startup(function()
    use('ctrlpvim/ctrlp.vim')
 
    -- Auto completion
-   -- use('hrsh7th/nvim-compe')
    use('hrsh7th/cmp-nvim-lsp')
    use('hrsh7th/cmp-buffer')
    use('hrsh7th/cmp-path')

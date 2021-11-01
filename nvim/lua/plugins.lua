@@ -21,11 +21,43 @@ return require('packer').startup(function()
    }
    use('ctrlpvim/ctrlp.vim')
 
-   -- LSP
-   use('hrsh7th/nvim-compe')
+   -- Auto completion
+   -- use('hrsh7th/nvim-compe')
+   use('hrsh7th/cmp-nvim-lsp')
+   use('hrsh7th/cmp-buffer')
+   use('hrsh7th/cmp-path')
+   use { 
+     'hrsh7th/nvim-cmp',
+     config = function ()
+       require'cmp'.setup {
+       snippet = {
+         expand = function(args)
+           require'luasnip'.lsp_expand(args.body)
+         end
+       },
+     
+       sources = {
+         { name = 'luasnip' },
+         { name = 'nvim_lsp' },
+         { name = "buffer" },
+         { name = "path" }
+         -- more sources
+       },
+       mapping = {
+          ['<C-Space>'] = require('cmp').mapping(require('cmp').mapping.complete(), { 'i', 'c' }),
+          ['<CR>'] = require('cmp').mapping.confirm({ select = true }),
+       }
+     }
+     end
+   }
+
+   use('L3MON4D3/LuaSnip')
+   use { 'saadparwaiz1/cmp_luasnip' }
+
    -- use { 'ms-jpq/coq_nvim', branch = "coq" }
    -- use { 'ms-jpq/coq.artifacts', branch = "artifacts" }
 
+   -- LSP
    use {
       "folke/trouble.nvim",
       config = function()

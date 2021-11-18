@@ -5,6 +5,7 @@
 
 Utils.nremap_key("<C-d>", ":NERDTreeToggle<CR>")
 Utils.nremap_key("<C-p>", ":CtrlP")
+Utils.tremap_key("<Esc>", "<C-\\><C-n>")
 
 -- Set some editor specific Vim settings
 vim.cmd [[

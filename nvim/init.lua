@@ -6,6 +6,11 @@ function Utils.nremap_key(key, command)
 	vim.api.nvim_set_keymap("n", key, command, {})
 end
 
+-- Remap a key in terminal mode 
+function Utils.tremap_key(key, command)
+       vim.api.nvim_set_keymap("t", key, command, {})
+end
+
 function Utils.map(mode, lhs, rhs, opts)
   local options = { noremap = true }
   if opts then

@@ -1,9 +1,10 @@
 vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
 
 return require('packer').startup(function()
-
    -- Packer can manage itself
    use 'wbthomason/packer.nvim'
+
+   use 'NLKNguyen/papercolor-theme'
 
    -- Scala
    use({'scalameta/nvim-metals'})
@@ -76,9 +77,14 @@ return require('packer').startup(function()
 
    use('neovim/nvim-lspconfig')
    use('nvim-lua/lsp-status.nvim')
+   use('mattn/emmet-vim')
+   use('mhinz/vim-signify')
 
    use {
      'nvim-telescope/telescope.nvim',
      requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
    }
+
+   use('tpope/vim-fugitive')
+   use('fatih/vim-go')
 end)

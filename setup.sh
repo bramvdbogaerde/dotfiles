@@ -12,3 +12,4 @@ function link() {
 
 link $HOME/.config/nvim $PWD/nvim
 link $HOME/.config/fish $PWD/fish
+link $HOME/.xmonad $PWD/xmonad

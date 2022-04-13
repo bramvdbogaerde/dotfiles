@@ -17,4 +17,14 @@ vim.cmd [[
    set expandtab
    set shiftwidth=3
    set softtabstop=3
+
+   augroup CoqtailHighlights
+     autocmd!
+     autocmd ColorScheme *
+       \  hi def CoqtailChecked ctermbg=lightgreen guibg=Green
+       \| hi def CoqtailSent    ctermbg=lightblue guibg=LimeGreen
+   augroup END
+
+   syntax on
+
 ]]

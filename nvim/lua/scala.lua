@@ -1,6 +1,9 @@
 
 metals_config = require("metals").bare_config()
 metals_config.init_options.statusBarProvider = "on"
+--metals_config.settings = {
+--   serverVersion = "0.11.1-SNAPSHOT-dev"
+--}
 
 
 -- Enable Scala Metals on *.scala files

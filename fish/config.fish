@@ -70,6 +70,7 @@ alias thesis="tmux source-file /home/bram/.tmux/thesis.sh"
 alias ip="ip -c"
 alias attach="tmux a -t"
 alias scheme="/Applications/Racket\ v8.2/bin/plt-r5rs"
+alias svim="/usr/local/bin/nvim -S .vimsession.vim"
 alias emsdk_setup ". $HOME/data/sources/emsdk/emsdk_env.fish"
 
 ########################
@@ -95,6 +96,6 @@ if status --is-interactive
 eval (ssh-agent -c)
 end
 
-any-nix-shell fish --info-right | source
+# any-nix-shell fish --info-right | source
 
 

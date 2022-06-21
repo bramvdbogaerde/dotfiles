@@ -20,6 +20,16 @@ function Utils.map(mode, lhs, rhs, opts)
 end
 
 
+-- Preset some Coqtail defaults
+vim.cmd [[
+augroup CoqtailHighlights
+  autocmd!
+  autocmd ColorScheme *
+    \  hi def CoqtailChecked ctermbg=18 guibg=DarkBlue
+    \| hi def CoqtailSent    ctermbg=17 guibg=Blue
+augroup END
+]]
+
 require("plugins")
 require("editor")
 require("scala")

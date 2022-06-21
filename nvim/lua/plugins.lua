@@ -28,24 +28,25 @@ return require('packer').startup(function()
    use { 
      'hrsh7th/nvim-cmp',
      config = function ()
-       require'cmp'.setup {
-       snippet = {
-         expand = function(args)
-           require'luasnip'.lsp_expand(args.body)
-         end
-       },
-     
-       sources = {
-         { name = 'luasnip' },
-         { name = 'nvim_lsp' },
-         { name = "buffer" },
-         { name = "path" }
-         -- more sources
-       },
-       mapping = {
-          ['<C-Space>'] = require('cmp').mapping(require('cmp').mapping.complete(), { 'i', 'c' }),
-          ['<CR>'] = require('cmp').mapping.confirm({ select = true }),
-       }
+       local cmp = require 'cmp'
+       cmp.setup {
+          snippet = {
+            expand = function(args)
+              require'luasnip'.lsp_expand(args.body)
+            end
+          },
+        
+          sources = {
+            { name = 'luasnip' },
+            { name = 'nvim_lsp' },
+            { name = "buffer" },
+            { name = "path" }
+            -- more sources
+          },
+          mapping = cmp.mapping.preset.insert({
+             ['<C-Space>'] = require('cmp').mapping(require('cmp').mapping.complete(), { 'i', 'c' }),
+             ['<CR>'] = require('cmp').mapping.confirm({ select = true }),
+          })
      }
      end
    }
@@ -81,4 +82,5 @@ return require('packer').startup(function()
      'nvim-telescope/telescope.nvim',
      requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
    }
+   use {'nvim-telescope/telescope-ui-select.nvim' }
 end)

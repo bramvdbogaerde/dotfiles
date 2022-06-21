@@ -4,7 +4,7 @@ vim.opt_global.shortmess:remove("F"):append("c")
 Utils.nremap_key("<space>a", ":TroubleToggle<CR>")
 
 local lspconfig = require("lspconfig")
-local lspservers = { "rust_analyzer", "ccls" }
+local lspservers = { "rust_analyzer", "ccls", "pyright" }
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 

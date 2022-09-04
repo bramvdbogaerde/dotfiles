@@ -15,12 +15,20 @@ return require('packer').startup(function()
    -- Editor support
    use({'preservim/nerdtree'})
    use({'morhetz/gruvbox'})
+   use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+         'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+   }
    -- use({'vim-airline/vim-airline'})
    use {
      'hoob3rt/lualine.nvim',
      requires = {'kyazdani42/nvim-web-devicons', opt = true}
    }
    use('ctrlpvim/ctrlp.vim')
+
 
    -- Auto completion
    use('hrsh7th/cmp-nvim-lsp')

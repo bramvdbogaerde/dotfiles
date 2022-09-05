@@ -9,7 +9,7 @@ require('lualine').setup {
    },
    sections = {
       lualine_b = {{Get_MetalsStatus, icon = nil}, {"branch", icon = nil}},
-      -- lualine_z = {"location", require'lsp-status'.status}
+      lualine_z = {"location", require'lsp-status'.status}
    }
 }
 

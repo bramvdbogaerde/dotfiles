@@ -89,4 +89,5 @@ return require('packer').startup(function()
 
    use('tpope/vim-fugitive')
    use('fatih/vim-go')
+   use('nono/vim-handlebars')
 end)

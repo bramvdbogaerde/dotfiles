@@ -2,8 +2,11 @@
 -- Configuration about the editor itself. Includes support for things like NerdTree, 
 -- ctrlp and color schemes
 --
+--
+require("nvim-tree").setup()
 
-Utils.nremap_key("<C-d>", ":NERDTreeToggle<CR>")
+
+Utils.nremap_key("<C-d>", ":NvimTreeToggle<CR>")
 Utils.nremap_key("<C-p>", ":CtrlP")
 Utils.nremap_key("<C-e>", ":wa | :mksession! .vimsession.vim | :qa<CR>")
 Utils.tremap_key("<Esc>", "<C-\\><C-n>")

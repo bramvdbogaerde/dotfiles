@@ -1,6 +1,6 @@
 
 function Get_MetalsStatus() 
-   return vim.g["metals_status"] or ""
+   return string.gsub((vim.g["metals_status"] or ""), "%%", "%%%%")
 end
 
 require('lualine').setup {

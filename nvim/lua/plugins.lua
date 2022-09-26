@@ -36,6 +36,9 @@ return require('packer').startup(function()
    use('hrsh7th/cmp-path')
    use { 
      'hrsh7th/nvim-cmp',
+     requires = { 
+        {"kdheepak/cmp-latex-symbols"}
+     },
      config = function ()
        local cmp = require 'cmp'
        cmp.setup {
@@ -49,14 +52,19 @@ return require('packer').startup(function()
             { name = 'luasnip' },
             { name = 'nvim_lsp' },
             { name = "buffer" },
-            { name = "path" }
+            { name = "path" },
             -- more sources
           },
           mapping = cmp.mapping.preset.insert({
              ['<C-Space>'] = require('cmp').mapping(require('cmp').mapping.complete(), { 'i', 'c' }),
              ['<CR>'] = require('cmp').mapping.confirm({ select = true }),
           })
-     }
+       }
+       cmp.setup.filetype('coq', {
+          sources = cmp.config.sources({
+             {name = "latex_symbols"}
+          })
+       })
      end
    }
 

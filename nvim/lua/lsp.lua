@@ -1,12 +1,12 @@
 vim.opt_global.completeopt = { "menu", "noinsert", "noselect" }
-vim.opt_global.shortmess:remove("F"):append("c")
+-- vim.opt_global.shortmess:remove("F"):append("c")
 
 Utils.nremap_key("<space>a", ":TroubleToggle<CR>")
 
 local lspconfig = require("lspconfig")
-local lspservers = { "rust_analyzer", "ccls", "pyright" , "hls"}
+local lspservers = { "rust_analyzer", "ccls", "pyright" , "hls", "tsserver"}
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 for _, lsp in pairs(lspservers) do
    lspconfig[lsp].setup{ capabilities = capabilities }

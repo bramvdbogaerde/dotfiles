@@ -28,6 +28,8 @@ augroup CoqtailHighlights
     \  hi def CoqtailChecked ctermbg=18 guibg=DarkBlue
     \| hi def CoqtailSent    ctermbg=17 guibg=Blue
 augroup END
+
+command Fs :syntax sync fromstart
 ]]
 
 require("plugins")

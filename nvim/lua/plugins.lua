@@ -72,7 +72,10 @@ return require('packer').startup(function()
        })
        cmp.setup.filetype('scala', {
           sources = cmp.config.sources({
-             {name = "latex_symbols"}
+             {name = "latex_symbols"},
+             {name = "nvim_lsp"},
+             {name = "path"},
+             {name = "buffer"}
           })
        })
      end

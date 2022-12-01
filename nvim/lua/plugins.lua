@@ -65,6 +65,11 @@ return require('packer').startup(function()
              {name = "latex_symbols"}
           })
        })
+       cmp.setup.filetype('scheme', {
+          sources = cmp.config.sources({
+             {name = "latex_symbols"}
+          })
+       })
        cmp.setup.filetype('scala', {
           sources = cmp.config.sources({
              {name = "latex_symbols"}
@@ -111,4 +116,5 @@ return require('packer').startup(function()
    use('tpope/vim-fugitive')
    use('fatih/vim-go')
    use('nono/vim-handlebars')
+   use('tpope/vim-surround')
 end)

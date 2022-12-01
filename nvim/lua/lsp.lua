@@ -25,6 +25,6 @@ Utils.map("n", "<space>o", "<cmd>lua require('telescope.builtin').lsp_document_s
 Utils.map("n", "<space>s", "<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>")
 Utils.map("n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 Utils.map("n", "<leader>ef", "<cmd>lua vim.lsp.buf.code_action()<CR>")
-Utils.map("n", "<leader>en", "<cmd>lua vim.lsp.diagnostic.goto_next { wrap = true }<CR>")
+Utils.map("n", "<leader>en", "<cmd>lua vim.diagnostic.goto_next { wrap = true }<CR>")
 Utils.map("n", "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>")
 Utils.map("n", "<leader>i", "<cmd>lua vim.lsp.buf.hover()<CR>")

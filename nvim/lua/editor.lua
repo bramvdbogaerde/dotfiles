@@ -13,6 +13,7 @@ Utils.tremap_key("<Esc>", "<C-\\><C-n>")
 
 -- Set some editor specific Vim settings
 vim.cmd [[
+   set relativenumber
    set termguicolors
    syntax on
    colorscheme gruvbox

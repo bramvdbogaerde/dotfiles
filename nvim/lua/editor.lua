@@ -33,3 +33,9 @@ vim.cmd [[
    syntax on
 
 ]]
+
+-- Setup git integration
+--
+
+local neogit = require('neogit')
+neogit.setup {}

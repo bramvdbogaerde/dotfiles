@@ -8,7 +8,7 @@ vim.cmd [[
 if not configs.actor_lsp then 
    configs.actor_lsp = {
       default_config = {
-         cmd = {"/datapool/phd-bench/maf-actors-lsp/run.sh"},
+         cmd = {"/Users/bram/Seafile/code/maf-actor-lsp/run.sh"},
          filetypes = {"actor-scheme"},
          root_dir = lspconfig.util.root_pattern("actors-project"),
          settings = {},

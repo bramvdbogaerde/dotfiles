@@ -120,4 +120,5 @@ return require('packer').startup(function()
    use('fatih/vim-go')
    use('nono/vim-handlebars')
    use('tpope/vim-surround')
+   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 end)

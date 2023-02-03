@@ -9,7 +9,7 @@ vim.cmd [[
    au!
    au FileType scala,sbt lua require("metals").initialize_or_attach(metals_config)
    augroup end
-   autocmd BufWritePre *.scala lua vim.lsp.buf.formatting_sync(nil, 1000)
+   autocmd BufWritePre *.scala lua vim.lsp.buf.format(nil, 1000)
 ]]
 --
-Utils.map("n", "<leader>ff", "<cmd>lua vim.lsp.buf.formatting()<CR>")
+Utils.map("n", "<leader>ff", "<cmd>lua vim.lsp.buf.format()<CR>")

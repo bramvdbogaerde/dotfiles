@@ -32,7 +32,7 @@ set -gx HOMEBREW_PREFIX "/usr/local";
 set -gx HOMEBREW_CELLAR "/usr/local/Cellar";
 set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew";
 
-set -p PATH /opt/homebrew/bin
+set -a PATH /opt/homebrew/bin
 
 ###############################
 # Nix
@@ -99,5 +99,4 @@ eval (ssh-agent -c)
 end
 
 # any-nix-shell fish --info-right | source
-
-
+eval (opam env)

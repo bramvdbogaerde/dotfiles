@@ -4,7 +4,7 @@ vim.opt_global.completeopt = { "menu", "noinsert", "noselect" }
 Utils.nremap_key("<space>a", ":TroubleToggle<CR>")
 
 local lspconfig = require("lspconfig")
-local lspservers = { "rust_analyzer", "ccls", "pyright" , "hls", "tsserver"}
+local lspservers = { "rust_analyzer", "ccls", "pyright" , "hls", "tsserver", "texlab"}
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 

@@ -13,3 +13,6 @@ function link() {
 link $HOME/.config/nvim $PWD/nvim
 link $HOME/.config/fish $PWD/fish
 link $HOME/.xmonad $PWD/xmonad
+
+echo "setting up global gitignore"
+git config --global core.excludesFile "$PWD/gitignore"

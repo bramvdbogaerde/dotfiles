@@ -70,6 +70,12 @@ return require('packer').startup(function()
              {name = "latex_symbols"}
           })
        })
+
+       cmp.setup.filetype('haskell', {
+          sources = cmp.config.sources({
+             {name = "latex_symbols"}
+          })
+       })
        cmp.setup.filetype('scala', {
           sources = cmp.config.sources({
              {name = "latex_symbols"},

@@ -12,6 +12,9 @@ return require('packer').startup(function()
    -- Coq
    use({"whonore/Coqtail"})
 
+   -- Agda
+   use('ashinkarov/nvim-agda')
+
    -- Editor support
    use({'preservim/nerdtree'})
    use({'morhetz/gruvbox'})
@@ -66,6 +69,11 @@ return require('packer').startup(function()
           })
        })
        cmp.setup.filetype('scheme', {
+          sources = cmp.config.sources({
+             {name = "latex_symbols"}
+          })
+       })
+       cmp.setup.filetype('racket', {
           sources = cmp.config.sources({
              {name = "latex_symbols"}
           })

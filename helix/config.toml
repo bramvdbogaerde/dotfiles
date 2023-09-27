@@ -1,0 +1,10 @@
+theme = "amberwood"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor]
+line-number = "absolute"

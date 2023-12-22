@@ -1,46 +1,89 @@
-vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
 
-return require('packer').startup(function()
-   -- Packer can manage itself
-   use 'wbthomason/packer.nvim'
+------------------------------------------------------------
+-- Bootstrap lazy.nvim
+------------------------------------------------------------
 
-   use 'NLKNguyen/papercolor-theme'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
+------------------------------------------------------------
+
+function use(opts) 
+   return opts
+end
+
+------------------------------------------------------------
+-- Define which plugins to Load
+------------------------------------------------------------
+
+plugins = {
+   use 'NLKNguyen/papercolor-theme',
    -- Scala
-   use({'scalameta/nvim-metals'})
-
+   use({'scalameta/nvim-metals'}),
    -- Coq
-   use({"whonore/Coqtail"})
-
+   use({"whonore/Coqtail"}),
    -- Agda
-   use('ashinkarov/nvim-agda')
-
+   use('ashinkarov/nvim-agda'),
    -- Editor support
-   use({'preservim/nerdtree'})
-   use({'morhetz/gruvbox'})
+   use({'preservim/nerdtree'}),
+   use({'morhetz/gruvbox'}),
    use {
       'kyazdani42/nvim-tree.lua',
-      requires = {
+      dependencies = {
          'kyazdani42/nvim-web-devicons', -- optional, for file icons
       },
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
-   }
-   -- use({'vim-airline/vim-airline'})
+   },
    use {
      'hoob3rt/lualine.nvim',
-     requires = {'kyazdani42/nvim-web-devicons', opt = true}
-   }
-   use('ctrlpvim/ctrlp.vim')
+     dependencies = {'kyazdani42/nvim-web-devicons', lazy = true}
+   },
+   use('tpope/vim-surround'),
+   use('ctrlpvim/ctrlp.vim'), -- todo: remove and replace by telecope's fuzzy finder
+   -- Terminal
+   use {
+    's1n7ax/nvim-terminal',
+    config = function()
+        vim.o.hidden = true
+        require('nvim-terminal').setup()
+    end,
+   },
+   -- Telescope
+   use {
+     'nvim-telescope/telescope.nvim',
+     dependencies = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim'}
+   },
+   use {'nvim-telescope/telescope-ui-select.nvim' },
+   -- Lsp
+   use('neovim/nvim-lspconfig'),
+   use('williamboman/mason.nvim'),
+   use({
+      'williamboman/mason-lspconfig.nvim',
+      dependencies = "williamboman/mason.nvim"
+   }),
 
-
+   use('nvim-lua/lsp-status.nvim'),
+   -- Git 
+   use('tpope/vim-fugitive'),
+   use { 'TimUntersberger/neogit', dependencies = 'nvim-lua/plenary.nvim' },
    -- Auto completion
-   use('hrsh7th/cmp-nvim-lsp')
-   use('hrsh7th/cmp-buffer')
-   use('hrsh7th/cmp-path')
+   use('hrsh7th/cmp-nvim-lsp'),
+   use('hrsh7th/cmp-buffer'),
+   use('hrsh7th/cmp-path'),
    use { 
      'hrsh7th/nvim-cmp',
-     requires = { 
-        {"kdheepak/cmp-latex-symbols"}
+     dependencies = { 
+        "kdheepak/cmp-latex-symbols"
      },
      config = function ()
        local cmp = require 'cmp'
@@ -94,45 +137,7 @@ return require('packer').startup(function()
        })
      end
    }
+}
 
-   use('L3MON4D3/LuaSnip')
-   use { 'saadparwaiz1/cmp_luasnip' }
-
-   -- use { 'ms-jpq/coq_nvim', branch = "coq" }
-   -- use { 'ms-jpq/coq.artifacts', branch = "artifacts" }
-
-   -- LSP
-   use {
-      "folke/trouble.nvim",
-      config = function()
-         require("trouble").setup {
-            icons = false,
-            signs = {
-               -- icons / text used for a diagnostic
-               error = "error",
-               warning = "warn",
-               hint = "hint",
-               information = "info"
-            },
-            use_lsp_diagnostic_signs = false
-         }
-      end
-   }
-
-   use('neovim/nvim-lspconfig')
-   use('nvim-lua/lsp-status.nvim')
-   use('mattn/emmet-vim')
-   use('mhinz/vim-signify')
-
-   use {
-     'nvim-telescope/telescope.nvim',
-     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
-   }
-   use {'nvim-telescope/telescope-ui-select.nvim' }
-
-   use('tpope/vim-fugitive')
-   use('fatih/vim-go')
-   use('nono/vim-handlebars')
-   use('tpope/vim-surround')
-   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-end)
+-- Load the plugin system
+require("lazy").setup(plugins)

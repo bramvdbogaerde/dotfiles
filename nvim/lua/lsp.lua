@@ -1,7 +1,9 @@
+require("mason").setup()
+require("mason-lspconfig").setup()
+
 vim.opt_global.completeopt = { "menu", "noinsert", "noselect" }
 -- vim.opt_global.shortmess:remove("F"):append("c")
 
-Utils.nremap_key("<space>a", ":TroubleToggle<CR>")
 
 local lspconfig = require("lspconfig")
 local lspservers = { "rust_analyzer", "ccls", "pyright" , "hls", "tsserver", "texlab"}
@@ -20,8 +22,10 @@ require("telescope").setup {
 
 require("telescope").load_extension("ui-select")
 
+local telescope = require('telescope.builtin');
 
-Utils.map("n", "<space>o", "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>")
+vim.keymap.set("n", "<space>a", telescope.diagnostics)
+vim.keymap.set("n", "<space>o", telescope.lsp_document_symbols)
 Utils.map("n", "<space>s", "<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>")
 Utils.map("n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 Utils.map("n", "<leader>ef", "<cmd>lua vim.lsp.buf.code_action()<CR>")

@@ -48,7 +48,7 @@ set -x NIX_SSL_CERT_FILE /etc/ssl/certs/ca-certificates.crt
 ###############################
 
 # set -x IDF_PATH  $HOME/esp/esp-idf
-set -x EDITOR    hx
+set -x EDITOR    nvim
 
 ##################
 # Global aliases #

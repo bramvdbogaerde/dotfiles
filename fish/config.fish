@@ -74,6 +74,7 @@ alias attach="tmux a -t"
 alias scheme="/Applications/Racket\ v8.2/bin/plt-r5rs"
 alias svim="/usr/local/bin/nvim -S .vimsession.vim"
 alias emsdk_setup ". $HOME/data/sources/emsdk/emsdk_env.fish"
+alias watchlatex "find . -name \"*.tex\" | entr latexmk -pdf -shell-escape -synctex=1 -interaction=nonstopmode" 
 
 ########################
 # Global Abbreviations #

@@ -16,7 +16,7 @@ end
 
 -- texlab
 lspconfig.texlab.setup({
-   settings = {
+   setting = {
       texlab = {
          forwardSearch = {
             executable = "/Applications/Skim.app/Contents/SharedSupport/displayline", 

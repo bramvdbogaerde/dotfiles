@@ -136,7 +136,15 @@ plugins = {
           })
        })
      end
-   }
+   },
+   use {
+       'f3fora/nvim-texlabconfig',
+       config = function()
+           require('texlabconfig').setup(config)
+       end,
+       ft = { 'tex', 'bib' }, 
+       build = 'go build'
+  }
 }
 
 -- Load the plugin system

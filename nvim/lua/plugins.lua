@@ -26,7 +26,14 @@ end
 -- Define which plugins to Load
 ------------------------------------------------------------
 
+if vim.loop.os_uname().sysname == 'Darwin' then 
+   mac_plugins = {dir = '/opt/homebrew/opt/fzf'}
+else 
+   mac_plugins = {}
+end
+
 plugins = {
+   mac_plugins,
    use 'NLKNguyen/papercolor-theme',
    -- Scala
    use({'scalameta/nvim-metals'}),

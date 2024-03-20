@@ -7,7 +7,7 @@ require("nvim-tree").setup()
 
 
 Utils.nremap_key("<C-d>", ":NvimTreeToggle<CR>")
-Utils.nremap_key("<C-p>", ":CtrlP<CR>")
+Utils.nremap_key("<C-p>", ":FZF<CR>")
 Utils.nremap_key("<C-e>", ":wa | :mksession! .vimsession.vim | :qa<CR>")
 for i = 1, 10 do 
    Utils.nremap_key("<leader>" .. (i-1), (i) .. "gt")

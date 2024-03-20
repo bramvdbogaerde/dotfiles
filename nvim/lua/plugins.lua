@@ -27,9 +27,9 @@ end
 ------------------------------------------------------------
 
 if vim.loop.os_uname().sysname == 'Darwin' then 
-   mac_plugins = {dir = '/opt/homebrew/opt/fzf'}
+   mac_plugins = {dir = '/opt/homebrew/opt/fzf', lazy = false}
 else 
-   mac_plugins = {}
+   mac_plugins = 'junegunn/fzf'
 end
 
 plugins = {

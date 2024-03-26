@@ -71,6 +71,7 @@ plugins = {
      dependencies = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim'}
    },
    use {'nvim-telescope/telescope-ui-select.nvim' },
+   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
    -- Lsp
    use('neovim/nvim-lspconfig'),
    use('williamboman/mason.nvim'),
@@ -156,3 +157,5 @@ plugins = {
 
 -- Load the plugin system
 require("lazy").setup(plugins)
+-- Load the fzf extension for telescope
+require('telescope').load_extension('fzf')

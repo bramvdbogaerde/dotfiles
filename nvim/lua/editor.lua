@@ -4,10 +4,10 @@
 --
 --
 require("nvim-tree").setup()
-
+local telescope = require('telescope.builtin');
 
 Utils.nremap_key("<C-d>", ":NvimTreeToggle<CR>")
-Utils.nremap_key("<C-p>", ":FZF<CR>")
+vim.keymap.set("n", "<C-p>", telescope.find_files)
 Utils.nremap_key("<C-e>", ":wa | :mksession! .vimsession.vim | :qa<CR>")
 for i = 1, 10 do 
    Utils.nremap_key("<leader>" .. (i-1), (i) .. "gt")

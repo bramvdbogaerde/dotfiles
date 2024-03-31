@@ -19,3 +19,5 @@ link $HOME/.config/waybar $PWD/waybar
 
 echo "setting up global gitignore"
 git config --global core.excludesFile "$PWD/gitignore"
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RF"
+git config --global interactive.diffFilter "diff-so-fancy --patch"

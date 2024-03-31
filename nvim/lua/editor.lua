@@ -43,3 +43,8 @@ vim.cmd [[
 
 local neogit = require('neogit')
 neogit.setup {}
+
+-- Custom file types
+vim.filetype.add({
+   extension = { libjsonnet = "jsonnet" }
+})

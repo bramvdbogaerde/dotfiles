@@ -20,6 +20,7 @@ set -p PATH /Applications/sbt/bin
 set -p PATH "$HOME/Library/Application Support/Coursier/bin"
 set -p PATH "$HOME/.local/share/coursier/bin"
 set -p PATH "/Applications/Racket_Current/bin/"
+set -p PATH $HOME/go/bin/
 
 # make it an environment variable
 set -x PATH $PATH
@@ -90,6 +91,7 @@ abbr --add ccb "cargo build"
 abbr --add cct "cargo test"
 abbr --add ns "nix-shell"
 abbr --add a "attach"
+abbr --add gP "git pull"
 
 set -gx WASMTIME_HOME "$HOME/.wasmtime"
 

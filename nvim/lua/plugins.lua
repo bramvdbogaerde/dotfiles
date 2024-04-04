@@ -88,6 +88,10 @@ plugins = {
    use('hrsh7th/cmp-nvim-lsp'),
    use('hrsh7th/cmp-buffer'),
    use('hrsh7th/cmp-path'),
+   {
+   	"L3MON4D3/LuaSnip",
+	build = "make install_jsregexp"
+   },
    use { 
      'hrsh7th/nvim-cmp',
      dependencies = { 
@@ -101,9 +105,7 @@ plugins = {
               require'luasnip'.lsp_expand(args.body)
             end
           },
-        
           sources = {
-            { name = 'luasnip' },
             { name = 'nvim_lsp' },
             { name = "buffer" },
             { name = "path" },
@@ -132,7 +134,8 @@ plugins = {
 
        cmp.setup.filetype('haskell', {
           sources = cmp.config.sources({
-             {name = "latex_symbols"}
+             {name = "latex_symbols"},
+             {name = "nvim_lsp"}
           })
        })
        cmp.setup.filetype('scala', {

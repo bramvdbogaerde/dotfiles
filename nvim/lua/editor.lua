@@ -15,6 +15,20 @@ end
 
 Utils.tremap_key("<Esc>", "<C-\\><C-n>")
 
+require 'nordic'.setup {
+   override = {
+      Visual = {
+         bg = "#3A515D",
+         bold = false
+      },
+      Comment = {
+         fg = "darkgrey",
+         bold = false,
+         italic = false
+      }
+   }
+}
+
 -- Set some editor specific Vim settings
 vim.cmd [[
    set relativenumber

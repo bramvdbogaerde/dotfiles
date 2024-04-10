@@ -20,7 +20,7 @@ vim.cmd [[
    set relativenumber
    set termguicolors
    syntax on
-   colorscheme gruvbox
+   colorscheme nordic
    set smartindent " Do smart indenting when starting a new line
    set autoindent  " Copy indent from current line, over to the new line
    set expandtab
@@ -38,13 +38,24 @@ vim.cmd [[
 
 ]]
 
+-- TreeSitter support
+
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all" (the five listed parsers should always be installed)
+  ensure_installed = "all",
+  highlight = {
+	  enable = true, -- false will disable the whole extension
+	  disable = { }, -- list of language that will be disabled
+	  use_languagetree=true,
+  },
+  indent = {
+	  enable = true
+  },
+}
+
+--
 -- Setup git integration
 --
 
 local neogit = require('neogit')
 neogit.setup {}
-
--- Custom file types
-vim.filetype.add({
-   extension = { libjsonnet = "jsonnet" }
-})

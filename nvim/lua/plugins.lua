@@ -28,7 +28,10 @@ end
 
 plugins = {
    use 'google/vim-jsonnet',
+   -- Color schemes
    use 'NLKNguyen/papercolor-theme',
+   use "rebelot/kanagawa.nvim",
+   use 'AlexvZyl/nordic.nvim',
    -- Scala
    use({'scalameta/nvim-metals'}),
    -- Coq
@@ -50,7 +53,6 @@ plugins = {
      dependencies = {'kyazdani42/nvim-web-devicons', lazy = true}
    },
    use('tpope/vim-surround'),
-   use('ctrlpvim/ctrlp.vim'), -- todo: remove and replace by telecope's fuzzy finder
    -- Terminal
    use {
     's1n7ax/nvim-terminal',
@@ -73,10 +75,8 @@ plugins = {
       'williamboman/mason-lspconfig.nvim',
       dependencies = "williamboman/mason.nvim"
    }),
-
    use('nvim-lua/lsp-status.nvim'),
    -- Git 
-   use('tpope/vim-fugitive'),
    use { 'TimUntersberger/neogit', dependencies = 'nvim-lua/plenary.nvim' },
    -- Auto completion
    use('hrsh7th/cmp-nvim-lsp'),
@@ -149,7 +149,9 @@ plugins = {
        end,
        ft = { 'tex', 'bib' }, 
        build = 'go build'
-  }
+  },
+  -- Syntax highlighting
+  use 'nvim-treesitter/nvim-treesitter'
 }
 
 -- Load the plugin system

@@ -16,6 +16,7 @@ link $HOME/.xmonad $PWD/xmonad
 link $HOME/.config/helix $PWD/helix
 link $HOME/.config/hypr $PWD/hypr
 link $HOME/.config/waybar $PWD/waybar
+link $HOME/.tmux.conf $PWD/.tmux.conf
 
 echo "setting up global gitignore"
 git config --global core.excludesFile "$PWD/gitignore"

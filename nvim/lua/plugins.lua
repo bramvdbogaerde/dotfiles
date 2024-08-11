@@ -77,7 +77,7 @@ plugins = {
    }),
    use('nvim-lua/lsp-status.nvim'),
    -- Git 
-   use { 'TimUntersberger/neogit', dependencies = 'nvim-lua/plenary.nvim' },
+   use { 'NeogitOrg/neogit', dependencies = 'nvim-lua/plenary.nvim', config = true },
    -- Auto completion
    use('hrsh7th/cmp-nvim-lsp'),
    use('hrsh7th/cmp-buffer'),
@@ -142,16 +142,8 @@ plugins = {
        })
      end
    },
-   use {
-       'f3fora/nvim-texlabconfig',
-       config = function()
-           require('texlabconfig').setup(config)
-       end,
-       ft = { 'tex', 'bib' }, 
-       build = 'go build'
-  },
   -- Syntax highlighting
-  use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter',
 }
 
 -- Load the plugin system

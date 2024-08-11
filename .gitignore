@@ -31,3 +31,4 @@ cabal.project.local~
 # End of https://www.toptal.com/developers/gitignore/api/haskell
 xmonad/xmonad-x86_64-linux
 xmonad.errors
+.ccls-cache/

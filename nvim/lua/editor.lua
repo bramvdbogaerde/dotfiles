@@ -16,17 +16,17 @@ end
 Utils.tremap_key("<Esc>", "<C-\\><C-n>")
 
 require 'nordic'.setup {
-   override = {
-      Visual = {
+   on_highlight = function(highlights, palette)
+      highlights.Visual = {
          bg = "#3A515D",
          bold = false
-      },
-      Comment = {
+      }
+      highlights.Comment = {
          fg = "darkgrey",
          bold = false,
          italic = false
       }
-   }
+   end
 }
 
 -- Set some editor specific Vim settings

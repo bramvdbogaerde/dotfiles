@@ -77,6 +77,7 @@ alias svim="/usr/local/bin/nvim -S .vimsession.vim"
 alias emsdk_setup ". $HOME/data/sources/emsdk/emsdk_env.fish"
 alias watchlatex "find . -name \"*.tex\" | entr latexmk -pdf -shell-escape -synctex=1 -interaction=nonstopmode" 
 alias nv "nvim (fzf)"
+alias hx "helix"
 
 ########################
 # Global Abbreviations #
@@ -105,7 +106,4 @@ end
 # any-nix-shell fish --info-right | source
 # eval (opam env)
 
-
-
-
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /Users/bram/.ghcup/bin $PATH # ghcup-env
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $HOME/.ghcup/bin $PATH # ghcup-env

@@ -21,6 +21,7 @@ set -p PATH "$HOME/Library/Application Support/Coursier/bin"
 set -p PATH "$HOME/.local/share/coursier/bin"
 set -p PATH "/Applications/Racket_Current/bin/"
 set -p PATH $HOME/go/bin/
+set -p PATH $HOME/.ghcup/bin
 
 # make it an environment variable
 set -x PATH $PATH
@@ -77,6 +78,8 @@ alias svim="/usr/local/bin/nvim -S .vimsession.vim"
 alias emsdk_setup ". $HOME/data/sources/emsdk/emsdk_env.fish"
 alias watchlatex "find . -name \"*.tex\" | entr latexmk -pdf -shell-escape -synctex=1 -interaction=nonstopmode" 
 alias nv "nvim (fzf)"
+alias tf "terraform"
+alias hx "helix"
 
 ########################
 # Global Abbreviations #
@@ -104,8 +107,5 @@ end
 
 # any-nix-shell fish --info-right | source
 # eval (opam env)
-
-
-
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /Users/bram/.ghcup/bin $PATH # ghcup-env

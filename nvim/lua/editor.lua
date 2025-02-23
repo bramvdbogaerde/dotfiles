@@ -73,3 +73,4 @@ require'nvim-treesitter.configs'.setup {
 
 local neogit = require('neogit')
 neogit.setup {}
+

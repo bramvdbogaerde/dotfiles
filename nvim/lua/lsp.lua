@@ -6,7 +6,7 @@ vim.opt_global.completeopt = { "menu", "noinsert", "noselect" }
 
 
 local lspconfig = require("lspconfig")
-local lspservers = { "rust_analyzer", "ccls", "pyright" , "hls", "tsserver"}
+local lspservers = { "ccls", "pyright" , "hls", "tsserver"}
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 

@@ -1,0 +1,5 @@
+inherits = "nordic"
+
+
+"comment" = { fg = "white", modifiers = ["italic"] }
+

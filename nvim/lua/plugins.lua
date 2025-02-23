@@ -29,8 +29,6 @@ end
 plugins = {
    use 'google/vim-jsonnet',
    -- Color schemes
-   use 'NLKNguyen/papercolor-theme',
-   use "rebelot/kanagawa.nvim",
    use 'AlexvZyl/nordic.nvim',
    -- Scala
    use({'scalameta/nvim-metals'}),
@@ -40,7 +38,6 @@ plugins = {
    use('ashinkarov/nvim-agda'),
    -- Editor support
    use({'preservim/nerdtree'}),
-   use({'morhetz/gruvbox'}),
    use {
       'kyazdani42/nvim-tree.lua',
       dependencies = {

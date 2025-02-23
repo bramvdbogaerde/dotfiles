@@ -6,7 +6,7 @@ vim.opt_global.completeopt = { "menu", "noinsert", "noselect" }
 
 
 local lspconfig = require("lspconfig")
-local lspservers = { "rust_analyzer", "ccls", "pyright" , "hls", "tsserver"}
+local lspservers = { "ocamllsp", "rust_analyzer", "ccls", "pyright" , "hls", "ts_ls"}
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -38,6 +38,7 @@ local telescope = require('telescope.builtin');
 
 vim.keymap.set("n", "<space>a", telescope.diagnostics)
 vim.keymap.set("n", "<space>o", telescope.lsp_document_symbols)
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 Utils.map("n", "<space>s", "<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>")
 Utils.map("n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 Utils.map("n", "<leader>ef", "<cmd>lua vim.lsp.buf.code_action()<CR>")

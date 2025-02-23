@@ -77,7 +77,7 @@ plugins = {
    }),
    use('nvim-lua/lsp-status.nvim'),
    -- Git 
-   use { 'TimUntersberger/neogit', dependencies = 'nvim-lua/plenary.nvim' },
+   use { 'NeogitOrg/neogit', dependencies = 'nvim-lua/plenary.nvim', config = true },
    -- Auto completion
    use('hrsh7th/cmp-nvim-lsp'),
    use('hrsh7th/cmp-buffer'),
@@ -96,7 +96,7 @@ plugins = {
        cmp.setup {
           snippet = {
             expand = function(args)
-              require'luasnip'.lsp_expand(args.body)
+              -- require'luasnip'.lsp_expand(args.body)
             end
           },
           sources = {
@@ -147,14 +147,6 @@ plugins = {
        })
      end
    },
-   use {
-       'f3fora/nvim-texlabconfig',
-       config = function()
-           require('texlabconfig').setup(config)
-       end,
-       ft = { 'tex', 'bib' }, 
-       build = 'go build'
-  },
   -- Syntax highlighting
   use 'nvim-treesitter/nvim-treesitter',
   -- Test running

@@ -50,7 +50,7 @@
 "ui.background" = { fg = "white0", bg = "black2" }
 "ui.cursor" = { fg = "black1", bg = "gray4" }
 "ui.cursor.primary" = { fg = "black1", bg = "white0" }
-"ui.cursor.match" = { modifiers = ["bold"] }
+"ui.cursor.match" = { modifiers = ["bold", "italic", "underlined"] }
 "ui.linenr" = { fg = "gray2" }
 "ui.linenr.selected" = { fg = "gray4" }
 "ui.statusline" = { fg = "white0", bg = "black0" }

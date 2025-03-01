@@ -1,4 +1,5 @@
-theme = "nordic_custom"
+theme = "nordic"
+
 
 [editor.soft-wrap]
 enable = true
@@ -7,4 +8,14 @@ enable = true
 insert = "bar"
 
 [editor]
-line-number = "absolute"
+line-number = "relative"
+auto-pairs = false
+
+[editor.whitespace.render]
+nbsp = "all"
+
+[editor.whitespace.characters]
+nbsp = "_"
+
+[editor.smart-tab]
+enable = false

@@ -1,0 +1,11 @@
+[[language]]
+name = "latex"
+language-servers = [{ name = "ltex"}, {  name = "texlab" }]
+file-types = ["tex"]
+scope = "text.latex"
+roots = []
+
+[language-server.ltex]
+command = "ltex-ls-plus"
+config = { ltex.language = "en-GB" }
+

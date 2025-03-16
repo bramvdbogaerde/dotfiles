@@ -1,6 +1,5 @@
 theme = "nordic"
 
-
 [editor.soft-wrap]
 enable = true
 
@@ -18,4 +17,7 @@ nbsp = "all"
 nbsp = "_"
 
 [editor.smart-tab]
-enable = false
+enable = true
+
+[keys.normal]
+C-d = "@miwv*n"

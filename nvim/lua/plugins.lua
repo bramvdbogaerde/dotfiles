@@ -29,18 +29,15 @@ end
 plugins = {
    use 'google/vim-jsonnet',
    -- Color schemes
-   use 'NLKNguyen/papercolor-theme',
-   use "rebelot/kanagawa.nvim",
    use 'AlexvZyl/nordic.nvim',
    -- Scala
    use({'scalameta/nvim-metals'}),
    -- Coq
-   use({"whonore/Coqtail"}),
+   use({"whonore/Coqtail", lazy = false}),
    -- Agda
    use('ashinkarov/nvim-agda'),
    -- Editor support
    use({'preservim/nerdtree'}),
-   use({'morhetz/gruvbox'}),
    use {
       'kyazdani42/nvim-tree.lua',
       dependencies = {
@@ -110,6 +107,11 @@ plugins = {
              ['<CR>'] = require('cmp').mapping.confirm({ select = true }),
           })
        }
+       cmp.setup.filetype('markdown', {
+            sources = cmp.config.sources({
+               {name="latex_symbols"}
+            })
+       })
        cmp.setup.filetype('coq', {
           sources = cmp.config.sources({
              {name = "latex_symbols"}
@@ -144,6 +146,21 @@ plugins = {
    },
   -- Syntax highlighting
   use 'nvim-treesitter/nvim-treesitter',
+  -- Test running
+  {
+	  'mrcjkb/rustaceanvim',
+	  version = '^5', -- Recommended
+	  lazy = false, -- This plugin is already lazy
+  },
+  {
+     "nvim-neotest/neotest",
+     dependencies = {
+       "nvim-neotest/nvim-nio",
+       "nvim-lua/plenary.nvim",
+       "antoinemadec/FixCursorHold.nvim",
+       "nvim-treesitter/nvim-treesitter"
+     }
+  }
 }
 
 -- Load the plugin system

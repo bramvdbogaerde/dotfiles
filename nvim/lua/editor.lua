@@ -49,7 +49,7 @@ vim.cmd [[
    augroup END
 
    syntax on
-
+   set nofoldenable
 ]]
 
 -- TreeSitter support
@@ -68,8 +68,16 @@ require'nvim-treesitter.configs'.setup {
 }
 
 --
+-- Folding settings
+--
+
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+
+--
 -- Setup git integration
 --
 
 local neogit = require('neogit')
 neogit.setup {}
+

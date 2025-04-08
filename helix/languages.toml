@@ -5,6 +5,18 @@ file-types = ["tex"]
 scope = "text.latex"
 roots = []
 
+[[language]]
+name = "python"
+language-servers = [{ name = "pyright" }]
+file-types = ["py"]
+scope = "source.python"
+roots = []
+
+
+[language-server.py]
+command = "pyright-langserver"
+args = ["--stdio"]
+
 [language-server.ltex]
 command = "ltex-ls-plus"
 config = { ltex.language = "en-GB" }

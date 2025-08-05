@@ -12,6 +12,21 @@ file-types = ["py"]
 scope = "source.python"
 roots = []
 
+[[language]]
+name = "analysislang"
+scope = "source.analysislang"
+file-types = ["sem"]
+language-servers = ["analysislang-lsp"]
+comment-tokens = "%"
+
+
+[language-server.analysislang-lsp]
+command = "/home/bram/.local/bin/analysislang"
+args = ["lsp"]
+
+[[grammar]]
+name = "analysislang"
+source = { git = "git@github.com/bramvdbogaerde/analysislang", rev = "7f2e7d2d975db98c96a01bdef664b6797bda88b4", subpath = "tooling/tree-sitter-analysislang" }
 
 [language-server.py]
 command = "pyright-langserver"
@@ -20,4 +35,3 @@ args = ["--stdio"]
 [language-server.ltex]
 command = "ltex-ls-plus"
 config = { ltex.language = "en-GB" }
-

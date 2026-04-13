@@ -22,3 +22,6 @@ enable = true
 [keys.normal]
 C-d = "@miwv*n"
 C-y = ":sh tmux new-window -n fx '~/.config/helix/yazi-picker.sh open'"
+
+[editor.statusline]
+center = ["file-type"]

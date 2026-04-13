@@ -32,3 +32,4 @@ cabal.project.local~
 xmonad/xmonad-x86_64-linux
 xmonad.errors
 .ccls-cache/
+helix/runtime/

@@ -33,7 +33,6 @@ set -x MANPAGER "nvim +Man!"
 
 # alias pbcopy="xclip -selection clipboard"
 alias ssu="sudo"
-alias e="$EDITOR"
 alias ssh="env TERM=xterm ssh"
 alias ccl="cargo check --color always 2>&1 | less -r"
 alias ip="ip -c"
@@ -59,6 +58,7 @@ abbr --add ns nix-shell
 abbr --add a attach
 abbr --add gp "git push"
 abbr --add gP "git pull"
+abbr --add e $EDITOR
 
 # On some systems we need to start the SSH agent
 # ourselves, but we cannot do it for non-interactive
